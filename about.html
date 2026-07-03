@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Ojashwi Uprety</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdf6e3;
+      margin: 0;
+      display: flex;
+      color: #1f2937;
+    }
+
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      position: fixed;
+      background: #1f1f1f;
+      color: white;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sidebar img {
+      width: 145px;
+      height: 145px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+      border: 3px solid #facc15;
+    }
+
+    .sidebar nav {
+      width: 100%;
+    }
+
+    .sidebar nav a {
+      color: white;
+      display: block;
+      padding: 12px 16px;
+      margin: 6px 0;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .sidebar nav a:hover {
+      background: #333;
+      transform: translateX(4px);
+    }
+
+    main {
+      margin-left: 260px;
+      padding: 3rem;
+      flex: 1;
+      min-height: 100vh;
+    }
+
+    .hero-card {
+      background: linear-gradient(135deg, #111827, #374151);
+      color: white;
+      padding: 3rem;
+      border-radius: 28px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+      margin-bottom: 2rem;
+    }
+
+    .tagline {
+      display: inline-block;
+      background: #facc15;
+      color: #111827;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-card h1 {
+      margin: 0 0 1rem;
+      font-size: 2.8rem;
+    }
+
+    .hero-card p {
+      max-width: 850px;
+      margin: 0;
+      line-height: 1.7;
+      font-size: 1.1rem;
+      color: #f3f4f6;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1.4fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .card {
+      background: white;
+      border-radius: 24px;
+      padding: 2rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #111827;
+      font-size: 1.5rem;
+    }
+
+    .info-row {
+      display: flex;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #f3f4f6;
+      line-height: 1.5;
+    }
+
+    .info-row:last-child {
+      border-bottom: none;
+    }
+
+    .label {
+      min-width: 95px;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .value {
+      color: #4b5563;
+      word-break: break-word;
+    }
+
+    .buttons {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      padding: 11px 18px;
+      background: #1f1f1f;
+      color: white;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    .buttons a:hover {
+      background: #374151;
+      transform: translateY(-2px);
+    }
+
+    .skills-card {
+      background: white;
+      border-radius: 24px;
+      padding: 2rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+    }
+
+    .skills-card h2 {
+      margin-top: 0;
+      color: #111827;
+      font-size: 1.5rem;
+    }
+
+    .skill {
+      margin-bottom: 1rem;
+    }
+
+    .skill-top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 7px;
+      font-weight: 700;
+      color: #374151;
+      font-size: 0.95rem;
+    }
+
+    .bar {
+      height: 13px;
+      background: #e5e7eb;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, #facc15, #d97706);
+      border-radius: 999px;
+    }
+
+    .mini-grid {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .mini-card {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 1.5rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.07);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .mini-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .mini-card h3 {
+      margin: 0 0 0.6rem;
+      color: #111827;
+      font-size: 1.1rem;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: #4b5563;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .quote-card {
+      margin-top: 2rem;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      border-radius: 24px;
+      padding: 2rem;
+      text-align: center;
+      color: #92400e;
+      font-weight: 700;
+      font-size: 1.15rem;
+      line-height: 1.7;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+    }
+
+    @media (max-width: 950px) {
+      .content-grid,
+      .mini-grid {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        padding: 2rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      body {
+        display: block;
+      }
+
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+
+      main {
+        margin-left: 0;
+      }
+
+      .hero-card h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sidebar">
+    <img src="IMG_1451.jpeg" alt="Ojashwi Uprety" />
+
+    <nav>
+      <a href="about.html">About</a>
+      <a href="experience.html">Experience</a>
+      <a href="certification.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+      <a href="why-hire-me.html">Why Hire Me</a>
+    </nav>
+  </div>
+
+  <main>
+    <section class="hero-card">
+      <span class="tagline">Data Engineer + Data Analyst</span>
+      <h1>Hi, I'm Ojashwi Uprety</h1>
+      <p>
+        I build reliable data pipelines, automate reporting workflows, and turn complex datasets
+        into clear business insights. My work sits at the intersection of data engineering,
+        analytics, and storytelling because clean data is great, but useful data is even better.
+      </p>
+    </section>
+
+    <section class="content-grid">
+      <div class="card">
+        <h2>Quick Info</h2>
+
+        <div class="info-row">
+          <div class="label">Name</div>
+          <div class="value">Ojashwi Uprety</div>
+        </div>
+
+        <div class="info-row">
+          <div class="label">Degree</div>
+          <div class="value">B.S. in Computer Science, Gannon University</div>
+        </div>
+
+        <div class="info-row">
+          <div class="label">GPA</div>
+          <div class="value">3.85 · Dean's List every semester · Magna Cum Laude</div>
+        </div>
+
+        <div class="info-row">
+          <div class="label">Email</div>
+          <div class="value">uprety003@gannon.edu</div>
+        </div>
+
+        <div class="info-row">
+          <div class="label">Phone</div>
+          <div class="value">814-812-8153</div>
+        </div>
+
+        <div class="info-row">
+          <div class="label">LinkedIn</div>
+          <div class="value">linkedin.com/in/ojashwi-u-93691241b/</div>
+        </div>
+
+        <div class="info-row">
+          <div class="label">GitHub</div>
+          <div class="value">github.com/OjashwiUprety</div>
+        </div>
+
+        <div class="buttons">
+          <a href="Ojashwi Uprety_Resume.pdf" download>Download Resume</a>
+          <a href="Ojashwi Uprety_transcript.pdf" download>Download Transcript</a>
+        </div>
+      </div>
+
+      <div class="skills-card">
+        <h2>Core Skills</h2>
+
+        <div class="skill">
+          <div class="skill-top"><span>SQL</span><span>95%</span></div>
+          <div class="bar"><span style="width: 95%"></span></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-top"><span>Python</span><span>90%</span></div>
+          <div class="bar"><span style="width: 90%"></span></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-top"><span>Snowflake</span><span>88%</span></div>
+          <div class="bar"><span style="width: 88%"></span></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-top"><span>Data Engineering / ETL</span><span>88%</span></div>
+          <div class="bar"><span style="width: 88%"></span></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-top"><span>Power BI / Tableau</span><span>85%</span></div>
+          <div class="bar"><span style="width: 85%"></span></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-top"><span>Data Analysis & Reporting</span><span>90%</span></div>
+          <div class="bar"><span style="width: 90%"></span></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-top"><span>Data Validation & Reconciliation</span><span>87%</span></div>
+          <div class="bar"><span style="width: 87%"></span></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-top"><span>CI/CD & Git</span><span>82%</span></div>
+          <div class="bar"><span style="width: 82%"></span></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-top"><span>AWS / Azure</span><span>82%</span></div>
+          <div class="bar"><span style="width: 82%"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mini-grid">
+      <div class="mini-card">
+        <h3> Analyst Mindset</h3>
+        <p>I translate messy datasets into trends, KPIs, dashboards, and business decisions.</p>
+      </div>
+
+      <div class="mini-card">
+        <h3> Engineering Focus</h3>
+        <p>I build scalable pipelines, automate workflows, and make data reliable at scale.</p>
+      </div>
+
+      <div class="mini-card">
+        <h3> Business Impact</h3>
+        <p>I care about clean data, but I care even more about what teams can do with it.</p>
+      </div>
+    </section>
+
+    <section class="quote-card">
+      Turning coffee into SQL, Python into automation, and messy data into decisions.
+    </section>
+  </main>
+</body>
+</html>

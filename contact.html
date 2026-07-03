@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Ojashwi Uprety</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdf6e3;
+      margin: 0;
+      display: flex;
+      color: #1f2937;
+    }
+
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      position: fixed;
+      background: #1f1f1f;
+      color: white;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sidebar img {
+      width: 145px;
+      height: 145px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+      border: 3px solid #facc15;
+    }
+
+    .sidebar nav {
+      width: 100%;
+    }
+
+    .sidebar nav a {
+      color: white;
+      display: block;
+      padding: 12px 16px;
+      margin: 6px 0;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .sidebar nav a:hover {
+      background: #333;
+      transform: translateX(4px);
+    }
+
+    main {
+      margin-left: 260px;
+      padding: 3rem;
+      flex: 1;
+      min-height: 100vh;
+    }
+
+    .hero-card {
+      background: linear-gradient(135deg, #111827, #374151);
+      color: white;
+      padding: 3rem;
+      border-radius: 28px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+      margin-bottom: 2rem;
+    }
+
+    .tagline {
+      display: inline-block;
+      background: #facc15;
+      color: #111827;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-card h1 {
+      margin: 0 0 1rem;
+      font-size: 2.8rem;
+    }
+
+    .hero-card p {
+      margin: 0;
+      max-width: 850px;
+      line-height: 1.7;
+      color: #f3f4f6;
+      font-size: 1.1rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .contact-card {
+      background: white;
+      border-radius: 24px;
+      padding: 2rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.13);
+    }
+
+    .contact-card h2 {
+      margin: 0 0 0.6rem;
+      color: #111827;
+      font-size: 1.25rem;
+    }
+
+    .contact-card p {
+      margin: 0;
+      color: #4b5563;
+      line-height: 1.6;
+      word-break: break-word;
+    }
+
+    .contact-card a {
+      color: #92400e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      background: #fff7ed;
+      color: #92400e;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+    }
+
+    .joke-card {
+      margin-top: 2rem;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      border-radius: 24px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+    }
+
+    .joke-card h2 {
+      margin-top: 0;
+      color: #111827;
+    }
+
+    .joke-card p {
+      color: #92400e;
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 850px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      body {
+        display: block;
+      }
+
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+
+      main {
+        margin-left: 0;
+        padding: 2rem;
+      }
+
+      .hero-card h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sidebar">
+    <img src="IMG_1451.jpeg" alt="Ojashwi Uprety" />
+
+    <nav>
+      <a href="about.html">About</a>
+      <a href="experience.html">Experience</a>
+      <a href="certification.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+      <a href="why-hire-me.html">Why Hire Me</a>
+    </nav>
+  </div>
+
+  <main>
+    <section class="hero-card">
+      <span class="tagline">Let's Connect</span>
+      <h1>Contact Me</h1>
+      <p>
+        Got a data problem, dashboard idea, pipeline mystery, or just want to talk about
+        SQL, Python, analytics, or opportunities? I would love to hear from you.
+      </p>
+    </section>
+
+    <section class="contact-grid">
+      <div class="contact-card">
+        <div class="icon">📧</div>
+        <h2>Email</h2>
+        <p>
+          <a href="mailto:uprety003@gannon.edu">uprety003@gannon.edu</a>
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <div class="icon">📱</div>
+        <h2>Phone</h2>
+        <p>
+          <a href="tel:8148128153">814-812-8153</a>
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <div class="icon">💼</div>
+        <h2>LinkedIn</h2>
+        <p>
+          <a href="https://www.linkedin.com/in/ojashwi-uprety-521aab22b" target="_blank">
+            linkedin.com/in/ojashwi-uprety-521aab22b
+          </a>
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <div class="icon">💻</div>
+        <h2>GitHub</h2>
+        <p>
+          <a href="https://github.com/OjashwiUprety" target="_blank">
+            github.com/OjashwiUprety
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <section class="joke-card">
+      <h2>Still Here?</h2>
+      <p>
+        If you clicked the Contact tab, I am going to assume you probably want me on your team.
+        Great decision. Very data-driven.
+      </p>
+    </section>
+  </main>
+</body>
+</html>

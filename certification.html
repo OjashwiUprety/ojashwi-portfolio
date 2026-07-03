@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certifications - Ojashwi Uprety</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdf6e3;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      color: #1f2937;
+    }
+
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      position: fixed;
+      background-color: #1f1f1f;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .sidebar img {
+      width: 145px;
+      height: 145px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+      border: 3px solid #facc15;
+    }
+
+    .sidebar nav {
+      width: 100%;
+    }
+
+    .sidebar nav a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 12px 16px;
+      margin: 6px 0;
+      width: 100%;
+      text-align: left;
+      border-radius: 10px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .sidebar nav a:hover {
+      background-color: #333;
+      transform: translateX(4px);
+    }
+
+    main {
+      margin-left: 260px;
+      padding: 3rem;
+      flex: 1;
+      min-height: 100vh;
+    }
+
+    .hero-card {
+      background: linear-gradient(135deg, #111827, #374151);
+      color: white;
+      padding: 3rem;
+      border-radius: 28px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+      margin-bottom: 2.5rem;
+    }
+
+    .tagline {
+      display: inline-block;
+      background: #facc15;
+      color: #111827;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-card h1 {
+      margin: 0 0 1rem;
+      font-size: 2.8rem;
+    }
+
+    .hero-card p {
+      margin: 0;
+      max-width: 850px;
+      line-height: 1.7;
+      color: #f3f4f6;
+      font-size: 1.1rem;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .cert-card {
+      background: white;
+      border-radius: 24px;
+      padding: 2rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.13);
+    }
+
+    .cert-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 6px;
+      width: 100%;
+      background: linear-gradient(90deg, #facc15, #d97706);
+    }
+
+    .cert-icon {
+      width: 52px;
+      height: 52px;
+      background: #fff7ed;
+      color: #92400e;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+    }
+
+    .cert-card h2 {
+      margin: 0 0 0.8rem;
+      color: #111827;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+
+    .cert-card p {
+      margin: 0 0 1rem;
+      color: #4b5563;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .cert-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 1rem;
+    }
+
+    .cert-meta span {
+      background: #f3f4f6;
+      color: #374151;
+      border: 1px solid #e5e7eb;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .cert-link {
+      display: inline-block;
+      margin-top: 1.2rem;
+      padding: 10px 15px;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .cert-link:hover {
+      background: #374151;
+      transform: translateY(-2px);
+    }
+
+    .credential-id {
+      margin-top: 0.8rem;
+      font-size: 0.85rem;
+      color: #6b7280;
+      word-break: break-word;
+    }
+
+    .learning-card {
+      margin-top: 2rem;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+    }
+
+    .learning-card h2 {
+      margin-top: 0;
+      color: #111827;
+    }
+
+    .learning-card p {
+      color: #4b5563;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 900px) {
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      body {
+        display: block;
+      }
+
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+
+      main {
+        margin-left: 0;
+        padding: 2rem;
+      }
+
+      .hero-card h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sidebar">
+    <img src="IMG_1451.jpeg" alt="Ojashwi Uprety" />
+
+    <nav>
+      <a href="about.html">About</a>
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+      <a href="why-hire-me.html">Why Hire Me</a>
+    </nav>
+  </div>
+
+  <main>
+    <section class="hero-card">
+      <span class="tagline">Certifications & Learning</span>
+      <h1>Certifications</h1>
+      <p>
+        I use certifications to strengthen the same skills I apply in real projects:
+        SQL, Python, cloud data platforms, automation, data engineering, and reliable analytics delivery.
+      </p>
+    </section>
+
+    <section class="cert-grid">
+      <article class="cert-card">
+        <div class="cert-icon">☁️</div>
+        <h2>AWS Certified Data Engineer Associate</h2>
+        <p>
+          Validates data engineering skills across ingestion, transformation,
+          orchestration, data storage, data operations, and AWS analytics workflows.
+        </p>
+
+        <div class="cert-meta">
+          <span>AWS</span>
+          <span>Data Engineering</span>
+          <span>Jul 2025</span>
+        </div>
+
+        <p class="credential-id">
+          <strong>Credential ID:</strong> b07a94006f4b44269dbf245d37444ace
+        </p>
+
+        <a
+          class="cert-link"
+          href="https://aws.amazon.com/verification"
+          target="_blank"
+        >
+          Verify AWS Credential
+        </a>
+      </article>
+
+      <article class="cert-card">
+        <div class="cert-icon">🔷</div>
+        <h2>Microsoft Certified: Azure Fundamentals</h2>
+        <p>
+          Demonstrates foundational understanding of Azure cloud services,
+          security, governance, cloud concepts, and Azure-based solutions.
+        </p>
+
+        <div class="cert-meta">
+          <span>Microsoft Azure</span>
+          <span>Cloud</span>
+          <span>Aug 2025</span>
+        </div>
+
+        <a
+          class="cert-link"
+          href="https://learn.microsoft.com/api/credentials/share/en-us/OjashwiUprety-4590/94DEA95CFD5CCFD5?sharingId"
+          target="_blank"
+        >
+          View Azure Credential
+        </a>
+      </article>
+
+      <article class="cert-card">
+        <div class="cert-icon">💻</div>
+        <h2>Technical Interview Prep Course</h2>
+        <p>
+          Strengthened coding problem-solving, data structures, algorithms,
+          technical communication, and software engineering interview readiness.
+        </p>
+
+        <div class="cert-meta">
+          <span>CodePath</span>
+          <span>DSA</span>
+          <span>Aug 2024</span>
+        </div>
+      </article>
+
+      <article class="cert-card">
+        <div class="cert-icon">🌐</div>
+        <h2>Extreme Networks Certification</h2>
+        <p>
+          Built foundational networking knowledge across connectivity,
+          infrastructure, troubleshooting, and enterprise network concepts.
+        </p>
+
+        <div class="cert-meta">
+          <span>Networking</span>
+          <span>Infrastructure</span>
+          <span>Dec 2021</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="learning-card">
+      <h2>Always Building, Always Learning</h2>
+      <p>
+        My favorite kind of learning is practical: building pipelines, improving dashboards,
+        optimizing queries, automating manual workflows, and turning confusing datasets
+        into something useful.
+      </p>
+    </section>
+  </main>
+</body>
+</html>

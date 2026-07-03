@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience - Ojashwi Uprety</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdf6e3;
+      margin: 0;
+      display: flex;
+      color: #1f2937;
+    }
+
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      position: fixed;
+      background: #1f1f1f;
+      color: white;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sidebar img {
+      width: 145px;
+      height: 145px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+      border: 3px solid #facc15;
+    }
+
+    .sidebar nav {
+      width: 100%;
+    }
+
+    .sidebar nav a {
+      color: white;
+      display: block;
+      padding: 12px 16px;
+      margin: 6px 0;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .sidebar nav a:hover {
+      background: #333;
+      transform: translateX(4px);
+    }
+
+    main {
+      margin-left: 260px;
+      padding: 3rem;
+      flex: 1;
+      min-height: 100vh;
+    }
+
+    .page-header {
+      background: linear-gradient(135deg, #111827, #374151);
+      color: white;
+      padding: 3rem;
+      border-radius: 28px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+      margin-bottom: 2.5rem;
+    }
+
+    .page-header span {
+      display: inline-block;
+      background: #facc15;
+      color: #111827;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .page-header h1 {
+      margin: 0 0 1rem;
+      font-size: 2.8rem;
+    }
+
+    .page-header p {
+      margin: 0;
+      max-width: 850px;
+      line-height: 1.7;
+      color: #f3f4f6;
+      font-size: 1.1rem;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 1050px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 20px;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: #facc15;
+      border-radius: 999px;
+    }
+
+    .experience-card {
+      position: relative;
+      background: #ffffff;
+      margin: 0 0 2rem 55px;
+      padding: 1.8rem;
+      border-radius: 22px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.13);
+    }
+
+    .experience-card::before {
+      content: "";
+      position: absolute;
+      left: -46px;
+      top: 30px;
+      width: 18px;
+      height: 18px;
+      background: #111827;
+      border: 4px solid #facc15;
+      border-radius: 50%;
+    }
+
+    .job-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin-bottom: 0.7rem;
+    }
+
+    .job-title h2 {
+      margin: 0;
+      color: #111827;
+      font-size: 1.35rem;
+    }
+
+    .company {
+      margin-top: 0.35rem;
+      color: #4b5563;
+      font-weight: 600;
+    }
+
+    .date-pill {
+      background: #fff7ed;
+      color: #92400e;
+      border: 1px solid #fed7aa;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .meta {
+      color: #6b7280;
+      margin: 0 0 1rem;
+      font-size: 0.95rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 1rem 0;
+    }
+
+    .tags span {
+      background: #f3f4f6;
+      color: #374151;
+      border: 1px solid #e5e7eb;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin-bottom: 0;
+    }
+
+    li {
+      margin-bottom: 0.65rem;
+      line-height: 1.6;
+      color: #374151;
+    }
+
+    strong {
+      color: #111827;
+    }
+
+    @media (max-width: 800px) {
+      body {
+        display: block;
+      }
+
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+
+      main {
+        margin-left: 0;
+        padding: 2rem;
+      }
+
+      .page-header h1 {
+        font-size: 2.2rem;
+      }
+
+      .timeline::before {
+        left: 10px;
+      }
+
+      .experience-card {
+        margin-left: 38px;
+      }
+
+      .experience-card::before {
+        left: -37px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sidebar">
+    <img src="IMG_1451.jpeg" alt="Ojashwi Uprety" />
+
+    <nav>
+      <a href="about.html">About</a>
+      <a href="experience.html">Experience</a>
+      <a href="certification.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+      <a href="why-hire-me.html">Why Hire Me</a>
+    </nav>
+  </div>
+
+  <main>
+    <section class="page-header">
+      <span>Work Experience</span>
+      <h1>Building Reliable Data, One Pipeline at a Time</h1>
+      <p>
+        My experience blends data engineering, analytics, automation, and reporting.
+        I enjoy transforming messy datasets into trusted insights, scalable workflows,
+        and dashboards that support smarter decisions.
+      </p>
+    </section>
+
+    <section class="timeline">
+      <article class="experience-card">
+        <div class="job-top">
+          <div class="job-title">
+            <h2>Data Engineer</h2>
+            <div class="company">Precisely Software</div>
+          </div>
+          <div class="date-pill">Sep 2025 – Mar 2026</div>
+        </div>
+
+        <p class="meta">Remote</p>
+
+        <div class="tags">
+          <span>SQL</span>
+          <span>Python</span>
+          <span>Data Validation</span>
+          <span>Reconciliation</span>
+          <span>Automation</span>
+        </div>
+
+        <ul>
+          <li>Analyzed and transformed <strong>5M+ structured records weekly</strong> using SQL and Python, ensuring accuracy across downstream reporting systems.</li>
+          <li>Built reconciliation and validation frameworks that reduced reporting discrepancies by <strong>22%</strong>.</li>
+          <li>Led classification and entity-mapping initiatives across <strong>250K+ business records</strong>, improving data quality by <strong>18%</strong>.</li>
+          <li>Performed root cause analysis on transactional datasets, reducing issue resolution time by <strong>40%</strong>.</li>
+          <li>Collaborated with engineering teams to automate analytical workflows, increasing automation coverage by <strong>35%</strong>.</li>
+          <li>Presented analytical findings and business recommendations to stakeholders.</li>
+        </ul>
+      </article>
+
+      <article class="experience-card">
+        <div class="job-top">
+          <div class="job-title">
+            <h2>Data Operation Intern</h2>
+            <div class="company">Precisely Software</div>
+          </div>
+          <div class="date-pill">Jun 2024 – Dec 2024</div>
+        </div>
+
+        <p class="meta">Remote</p>
+
+        <div class="tags">
+          <span>Snowflake</span>
+          <span>SQL</span>
+          <span>Tableau</span>
+          <span>Reporting</span>
+          <span>Analytics</span>
+        </div>
+
+        <ul>
+          <li>Developed complex SQL queries in Snowflake to analyze financial datasets exceeding <strong>2M records</strong>.</li>
+          <li>Automated recurring reporting workflows, reducing manual effort by <strong>60%</strong>.</li>
+          <li>Built Tableau dashboards to visualize KPIs and transactional trends.</li>
+          <li>Created customized analytical reports supporting client requests and RFP responses.</li>
+        </ul>
+      </article>
+
+      <article class="experience-card">
+        <div class="job-top">
+          <div class="job-title">
+            <h2>Data Analytics Coordinator</h2>
+            <div class="company">Gannon University</div>
+          </div>
+          <div class="date-pill">Sep 2022 – Sep 2024</div>
+        </div>
+
+        <p class="meta">Erie, PA</p>
+
+        <div class="tags">
+          <span>SQL</span>
+          <span>KPI Reporting</span>
+          <span>Dashboards</span>
+          <span>Data Governance</span>
+        </div>
+
+        <ul>
+          <li>Designed SQL-backed reporting pipelines supporting <strong>10K+ records annually</strong>.</li>
+          <li>Standardized KPI definitions and improved reporting consistency by <strong>28%</strong>.</li>
+          <li>Built reports and dashboards that translated complex data into actionable insights.</li>
+          <li>Collaborated with university leadership to support data-driven decision making.</li>
+        </ul>
+      </article>
+
+      <article class="experience-card">
+        <div class="job-top">
+          <div class="job-title">
+            <h2>Research Analyst</h2>
+            <div class="company">Gannon University</div>
+          </div>
+          <div class="date-pill">Oct 2021 – Dec 2022</div>
+        </div>
+
+        <p class="meta">Erie, PA</p>
+
+        <div class="tags">
+          <span>Python</span>
+          <span>SQL</span>
+          <span>Statistical Analysis</span>
+          <span>Anomaly Detection</span>
+        </div>
+
+        <ul>
+          <li>Analyzed <strong>100K+ research records</strong> using SQL and Python.</li>
+          <li>Built reproducible data processing pipelines that improved data integrity by <strong>35%</strong>.</li>
+          <li>Performed statistical analysis, anomaly detection, and data validation.</li>
+          <li>Documented methodologies to improve auditability and long-term reproducibility.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

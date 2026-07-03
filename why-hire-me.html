@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why Hire Me - Ojashwi Uprety</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdf6e3;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      color: #1f2937;
+    }
+
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      position: fixed;
+      background-color: #1f1f1f;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .sidebar img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+      border: 3px solid #facc15;
+    }
+
+    .sidebar nav {
+      width: 100%;
+    }
+
+    .sidebar nav a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 12px 16px;
+      width: 100%;
+      text-align: left;
+      border-radius: 10px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .sidebar nav a:hover {
+      background-color: #333;
+      transform: translateX(4px);
+    }
+
+    main {
+      margin-left: 260px;
+      padding: 3rem;
+      flex: 1;
+      min-height: 100vh;
+    }
+
+    .hero-card {
+      background: linear-gradient(135deg, #111827, #374151);
+      color: white;
+      padding: 3rem;
+      border-radius: 28px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+      margin-bottom: 2rem;
+    }
+
+    .hero-card h1 {
+      font-size: 2.8rem;
+      margin: 0 0 1rem;
+    }
+
+    .hero-card p {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      max-width: 850px;
+      margin: 0;
+      color: #f3f4f6;
+    }
+
+    .tagline {
+      display: inline-block;
+      background-color: #facc15;
+      color: #111827;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .hire-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 2rem;
+    }
+
+    .hire-card {
+      background: #ffffff;
+      padding: 1.6rem;
+      border-radius: 22px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .hire-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.13);
+    }
+
+    .hire-card h3 {
+      margin: 0 0 0.8rem;
+      color: #111827;
+      font-size: 1.15rem;
+    }
+
+    .hire-card p {
+      margin: 0;
+      color: #4b5563;
+      line-height: 1.6;
+      font-size: 0.97rem;
+    }
+
+    .fun-section {
+      margin-top: 2rem;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+    }
+
+    .fun-section h2 {
+      margin-top: 0;
+      color: #111827;
+    }
+
+    .fun-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .fun-list li {
+      background: white;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid #fde68a;
+      color: #374151;
+      line-height: 1.5;
+    }
+
+    .closing-card {
+      margin-top: 2rem;
+      background: #1f2937;
+      color: white;
+      padding: 2rem;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .closing-card p {
+      margin: 0;
+      font-size: 1.15rem;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 950px) {
+      .hire-grid,
+      .fun-list {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        padding: 2rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      body {
+        display: block;
+      }
+
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+
+      main {
+        margin-left: 0;
+      }
+
+      .hero-card h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sidebar">
+    <img src="IMG_1451.jpeg" alt="Ojashwi Uprety" />
+
+    <nav>
+      <a href="about.html">About</a>
+      <a href="experience.html">Experience</a>
+      <a href="certification.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+      <a href="why-hire-me.html">Why Hire Me</a>
+    </nav>
+  </div>
+
+  <main>
+    <section class="hero-card">
+      <span class="tagline">Data Engineer + Data Analyst</span>
+      <h1>Why Hire Me?</h1>
+      <p>
+        Because I turn messy data into reliable insights, automate repetitive work,
+        build pipelines that scale, and create dashboards people actually trust.
+        I bring an engineer's problem-solving mindset with an analyst's curiosity.
+      </p>
+    </section>
+
+    <section class="hire-grid">
+      <div class="hire-card">
+        <h3> Analyst Mindset</h3>
+        <p>I ask the right questions, find patterns, and turn raw data into business decisions.</p>
+      </div>
+
+      <div class="hire-card">
+        <h3> Engineering Skill</h3>
+        <p>I build ETL pipelines, automate workflows, and make data reliable at scale.</p>
+      </div>
+
+      <div class="hire-card">
+        <h3> Dashboard Builder</h3>
+        <p>I create dashboards that answer questions instead of creating new ones.</p>
+      </div>
+
+      <div class="hire-card">
+        <h3>Data Quality Focus</h3>
+        <p>I validate, reconcile, and clean data so teams can trust the numbers.</p>
+      </div>
+
+      <div class="hire-card">
+        <h3> Automation Fan</h3>
+        <p>If someone is doing the same task every week, I am probably already thinking about automating it.</p>
+      </div>
+
+      <div class="hire-card">
+        <h3>Reliable Teammate</h3>
+        <p>Powered by SQL, Python, curiosity, and just enough coffee to debug one more pipeline.</p>
+      </div>
+    </section>
+
+    <section class="fun-section">
+      <h2>Hire Me If...</h2>
+
+      <ul class="fun-list">
+        <li> Your data needs more help than your coffee machine.</li>
+        <li> Your dashboard starts with, “Ignore the numbers for now.”</li>
+        <li> Your pipeline is held together by hope and one forgotten script.</li>
+        <li> “Where did this number come from?” is asked in every meeting.</li>
+        <li> You are ready to retire copy-paste reporting.</li>
+        <li> You want insights instead of guesses.</li>
+      </ul>
+    </section>
+
+    <section class="closing-card">
+      <p>
+        I do not just analyze data. I make it useful, trustworthy, and ready for action.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
